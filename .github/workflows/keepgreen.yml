@@ -1,3 +1,4 @@
+
 name: Verde Diário
 
 on:
@@ -17,9 +18,12 @@ jobs:
           echo "Ping: $(date)" >> verde.txt
 
       - name: Commit e Push
+        env:
+          TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add verde.txt
           git commit -m "🌱 Ping automático - $(date +'%d/%m/%Y')" || echo "Nada para commitar"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git push
