@@ -25,7 +25,7 @@ The workflow `verde-diario.yml`, located in `.github/workflows/`, performs the f
 
 📅 Execution Schedule
 
-🔄 Última atualização automática: 26/08/2026 15:27:37 (horário de Brasília)
+🔄 Última atualização automática: 27/08/2026 12:46:46 (horário de Brasília)
 - Can also be triggered manually via GitHub (`workflow_dispatch`).
 
 ---
